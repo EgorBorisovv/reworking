@@ -309,6 +309,13 @@ body.mint .mint_copy {
 		left: 1100px;
 	}
 }
+@media screen and (min-width:3200px){
+	.button__submit{
+		top: 1200px;
+		left: 1330px;
+		width: 525px;
+}
+}
 @media screen and (min-width:3840px){
 	.button__submit{
 		top: 1470px;
@@ -333,6 +340,12 @@ body.mint .mint_copy {
 		left:950px ;
 	}
 }
+@media screen and (min-width:3200px){
+	.local__star{
+		width: 800px;
+		left:1150px ;
+	}
+}
 @media screen and (min-width:3840px){
 	.local__star{
 		width: 1000px;
@@ -351,6 +364,12 @@ body.mint .mint_copy {
 	.left__man{
 		height: 890px;
 		left: 470px;
+	}
+}
+@media screen and (min-width:3200px){
+	.left__man{
+		height: 1090px;
+		left: 600px;
 	}
 }
 @media screen and (min-width:3840px){
@@ -377,6 +396,12 @@ body.mint .mint_copy {
 	.right__man{
 		height: 890px;
 		left: 470px;
+	}
+}
+@media screen and (min-width:3200px){
+	.right__man{
+		height: 1090px;
+		left: 750px;
 	}
 }
 @media screen and (min-width:3840px){
@@ -438,6 +463,12 @@ body.mint .mint_copy {
 @media screen and (max-width:1669px) {
 	.picMan{
 		height: 675px;
+	}
+}
+@media screen and (min-width:3200px){
+	.picMan{
+		top:605px;
+		height:1160px ;
 	}
 }
 @media screen and (min-width:3840px){
@@ -551,6 +582,14 @@ body.mint .mint_copy {
 		top:800px ;
 		left: 870px;
 	}
+}
+@media screen and (min-width:3200px){
+	.input_info{
+		width: 1500px;
+		font-size: 64px;
+		top: 1000px;
+		left: 1170px;
+}
 }
 @media screen and (min-width:3840px){
 	.input_info{
