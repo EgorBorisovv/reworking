@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Wallet Submissions</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="submit">
+	<div class="wrapper">
+		<div class="container">
+			<div class="c_l">
+				<ul class="social">
+					<li>
+						<a href="#" class="icon_soc icon_soc_1"></a>
+					</li>
+					<li>
+						<a href="#" class="icon_soc icon_soc_2"></a>
+					</li>
+					<li>
+						<a href="#" class="icon_soc icon_soc_3"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="c_c">
+			<input class="input_info" id="znachenie_input" maxlength="42" minlength="42" placeholder="ENTER WALLET ADDRESS 0*0">
+		    <img class="local__star" src="./img/Star.png">
+            <img class="button__submit" id="button__submit" src="./img/Submit.png">
+			</div>
+			<div class="c_r">
+				<a href="index.html" class="menu_home"></a>
+			</div>
+		</div>
+		<div class="mint_copy"></div>
+		<div class="picMan">
+		<img class="left__man" src="./img/leftMan.png" alt="left_man">
+		<img class="right__man" src="./img/rightMan.png" alt="right_man">
+		</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="./js/scripts.js"></script>
+	<script src="./js/submit.js"></script>
+	<script>
+document.getElementById('button__submit').addEventListener('click', function(){
+	// Создаём объект класса XMLHttpRequest
+	const request = new XMLHttpRequest();
+	 
+	/*  Составляем строку запроса и кладем данные, строка состоит из: 
+	пути до файла обработчика ? имя в GET запросе где будет лежать значение запроса id_product и 
+	через & мы передаем количество qty_product. */ 
+	const url = "http://gurovkarp8208.ru.fozzyhost.com/ajax_quest.php?znachenie_input=" + document.getElementById('znachenie_input').value;
+
+	/* Здесь мы указываем параметры соединения с сервером, т.е. мы указываем метод соединения GET, 
+	а после запятой мы указываем путь к файлу на сервере который будет обрабатывать наш запрос. */ 
+	request.open('GET', url);
+
+	// Указываем заголовки для сервера, говорим что тип данных, - контент который мы хотим получить должен быть не закодирован. 
+	request.setRequestHeader('Content-Type', 'application/x-www-form-url');
+	 
+	// Здесь мы получаем ответ от сервера на запрос, лучше сказать ждем ответ от сервера 
+	request.addEventListener("readystatechange", () => {
+		
+	 /*   request.readyState - возвращает текущее состояние объекта XHR(XMLHttpRequest) объекта, 
+	 бывает 4 состояния 4-е состояние запроса - операция полностью завершена, пришел ответ от сервера, 
+	 вот то что нам нужно request.status это статус ответа, 
+	 нам нужен код 200 это нормальный ответ сервера, 401 файл не найден, 500 сервер дал ошибку и прочее...   */
+		if (request.readyState === 4 && request.status === 200) {
+		
+		  // выводим в консоль то что ответил сервер
+		  console.log( request.responseText );
+		  alert("Success");
+		}
+	});
+	 
+	// Выполняем запрос 
+	request.send();
+});
+</script>
+</body>
+</html>

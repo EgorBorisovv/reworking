@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'antrf';
+    src: url(./antrf___.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'blockboy';
+    src: url(./BlocBoy_PERSONAL_USE_ONLY.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'akidanHatory';
+    src: url(./AkidanHatory.ttf) format('truetype');
+    src:url(./AkidanHatory.otf) format("opentype");
+}
